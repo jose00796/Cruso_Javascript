@@ -7,13 +7,26 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Funciones Javascript</title>
+    <style>
+        .inicio{
+            width: 0%;
+        }
+
+        .final{
+            width: 100%;
+        }
+
+        .animacion{
+            transition: all 2s ease .5s;
+        }
+    </style>
 </head>
 <body>
     <div class="container text-center py-5">
         <h1 id="titulo" class="display-4">Animacion_de_Barra</h1>
         <div class="py-4">
             <div class="progress">
-                <div id="barra" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                <div id="barra" class="progress-bar progress-bar-striped inicio animacion" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
         <button id="boton" class="btn btn-warning">Animar</button>
@@ -21,7 +34,7 @@
 
     <script>
         function animar() {
-            document.getElementById("barra").classList.toggle("progress-bar-animated");
+            document.getElementById("barra").classList.toggle("final");
         }
         document.getElementById("boton").onclick = function(){
             animar();
